@@ -402,55 +402,25 @@
     .cta-section h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; margin-bottom: 1rem; }
     .cta-section p { color: var(--muted); margin-bottom: 2.5rem; font-size: 1.05rem; }
 
-    /* ── AD BANNER ── */
-    .ad-banner {
+    /* ── AD SPACE ── */
+    .ad-space {
       background: var(--card);
-      border: 1px solid var(--border);
+      border: 1px dashed rgba(255,255,255,0.1);
       border-radius: 16px;
-      padding: 1.5rem;
+      padding: 1rem;
       text-align: center;
       max-width: 900px;
-      margin: 0 auto 4rem;
-      position: relative;
+      margin: 3rem auto;
+      min-height: 120px;
       overflow: hidden;
     }
-    .ad-banner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(254,44,85,.04), rgba(37,244,238,.04));
-      pointer-events: none;
-    }
-    .ad-label {
-      font-size: .7rem;
+    .ad-space-label {
+      font-size: .65rem;
       color: var(--muted);
       letter-spacing: .1em;
       text-transform: uppercase;
-      margin-bottom: .8rem;
+      margin-bottom: .5rem;
     }
-    .ad-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .ad-emoji { font-size: 2.5rem; }
-    .ad-text h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: .3rem; }
-    .ad-text p { color: var(--muted); font-size: .88rem; }
-    .ad-btn {
-      background: linear-gradient(135deg, var(--accent2), #00b8b4);
-      color: #000;
-      text-decoration: none;
-      padding: .6rem 1.4rem;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: .9rem;
-      font-family: var(--font);
-      white-space: nowrap;
-      transition: opacity .2s;
-    }
-    .ad-btn:hover { opacity: .85; }
 
     /* ── VERSION BADGE ── */
     .version-badge {
@@ -574,6 +544,19 @@
     </div>
   </div>
 
+  <!-- إعلان رقم 1 -->
+  <div class="ad-space">
+    <div class="ad-space-label">إعلان مدعوم</div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6047567977712893"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
   <!-- FEATURES -->
   <section class="section" id="features">
     <div class="section-label">✨ المميزات</div>
@@ -613,6 +596,19 @@
     </div>
   </section>
 
+  <!-- إعلان رقم 2 -->
+  <div class="ad-space">
+    <div class="ad-space-label">إعلان مدعوم</div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6047567977712893"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
   <!-- HOW IT WORKS -->
   <section class="section" id="how">
     <div class="section-label">📖 كيف يعمل</div>
@@ -637,19 +633,17 @@
     </div>
   </section>
 
-  <!-- AD BANNER -->
-  <div style="padding: 0 1.5rem;">
-    <div class="ad-banner">
-      <div class="ad-label">إعلان مدعوم</div>
-      <div class="ad-content">
-        <div class="ad-emoji">🔒</div>
-        <div class="ad-text">
-          <h4>هل تريد حماية هاتفك؟</h4>
-          <p>احمِ بياناتك وخصوصيتك مع VPN سريع وموثوق</p>
-        </div>
-        <a href="#" class="ad-btn">جرّب مجاناً</a>
-      </div>
-    </div>
+  <!-- إعلان رقم 3 -->
+  <div class="ad-space">
+    <div class="ad-space-label">إعلان مدعوم</div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6047567977712893"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </div>
 
   <!-- CTA -->
