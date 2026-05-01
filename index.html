@@ -13,6 +13,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Google Analytics 4 - إحصائيات الزوار -->
+  <!-- استبدل G-XXXXXXXXXX بـ Measurement ID من Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- ✅ Google AdSense - إعلانات -->
+  <!-- استبدل ca-pub-XXXXXXXXXXXXXXXX بـ Publisher ID من AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -389,6 +403,71 @@
     .cta-section h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; margin-bottom: 1rem; }
     .cta-section p { color: var(--muted); margin-bottom: 2.5rem; font-size: 1.05rem; }
 
+    /* ── AD BANNER ── */
+    .ad-banner {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .ad-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(254,44,85,.04), rgba(37,244,238,.04));
+      pointer-events: none;
+    }
+    .ad-label {
+      font-size: .7rem;
+      color: var(--muted);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: .8rem;
+    }
+    .ad-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .ad-emoji { font-size: 2.5rem; }
+    .ad-text h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: .3rem; }
+    .ad-text p { color: var(--muted); font-size: .88rem; }
+    .ad-btn {
+      background: linear-gradient(135deg, var(--accent2), #00b8b4);
+      color: #000;
+      text-decoration: none;
+      padding: .6rem 1.4rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: .9rem;
+      font-family: var(--font);
+      white-space: nowrap;
+      transition: opacity .2s;
+    }
+    .ad-btn:hover { opacity: .85; }
+
+    /* ── VERSION BADGE ── */
+    .version-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: rgba(37,244,238,.08);
+      border: 1px solid rgba(37,244,238,.2);
+      color: var(--accent2);
+      border-radius: 100px;
+      padding: .3rem .9rem;
+      font-size: .8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -439,11 +518,15 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
       <div class="hero-badge">⚡ الأسرع والأخف على Android</div>
+      <div class="version-badge">📦 الإصدار 1.0 — آخر تحديث: مايو 2025</div>
       <h1>حمّل فيديوهات <span>تيك توك</span><br/>بدون علامة مائية</h1>
       <p class="hero-sub">أسرع وأسهل طريقة لتحميل فيديوهات وصوتيات تيك توك بجودة عالية مجاناً لأجهزة Android</p>
       <div class="hero-btns">
-        <a href="https://www.mediafire.com/" id="btn-download-hero" class="btn-primary">
-          ⬇️ تحميل مجاني
+        <a href="https://github.com/uot2/tikdown-pro/releases/latest/download/tikdown-pro.apk"
+           id="btn-download-hero"
+           class="btn-primary"
+           onclick="gtag('event','apk_download',{'event_category':'engagement'});">
+          ⬇️ تحميل مجاني — APK مباشر
         </a>
         <a href="#features" class="btn-secondary">🎯 اكتشف المميزات</a>
       </div>
@@ -555,13 +638,32 @@
     </div>
   </section>
 
+  <!-- AD BANNER -->
+  <div style="padding: 0 1.5rem;">
+    <div class="ad-banner">
+      <div class="ad-label">إعلان مدعوم</div>
+      <div class="ad-content">
+        <div class="ad-emoji">🔒</div>
+        <div class="ad-text">
+          <h4>هل تريد حماية هاتفك؟</h4>
+          <p>احمِ بياناتك وخصوصيتك مع VPN سريع وموثوق</p>
+        </div>
+        <a href="#" class="ad-btn">جرّب مجاناً</a>
+      </div>
+    </div>
+  </div>
+
   <!-- CTA -->
   <section class="cta-section" id="download">
     <div class="cta-bg"></div>
     <h2>جاهز للبدء؟ 🚀</h2>
     <p>حمّل TikDown Pro الآن مجاناً لجهاز Android الخاص بك</p>
-    <a href="https://www.mediafire.com/" id="btn-download-cta" class="btn-primary" style="font-size:1.15rem; padding: 1rem 2.5rem;">
-      ⬇️ تحميل TikDown Pro مجاناً
+    <a href="https://github.com/uot2/tikdown-pro/releases/latest/download/tikdown-pro.apk"
+       id="btn-download-cta"
+       class="btn-primary"
+       style="font-size:1.15rem; padding: 1rem 2.5rem;"
+       onclick="gtag('event','apk_download',{'event_category':'engagement'});">
+      ⬇️ تحميل TikDown Pro مجاناً — APK مباشر
     </a>
     <p style="margin-top:1.2rem; font-size:.85rem; color: var(--muted);">
       متوافق مع Android 7.0 وما فوق • حجم التطبيق أقل من 10 ميغابايت
