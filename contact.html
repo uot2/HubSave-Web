@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اتصل بنا - TikDown Pro</title>
+  <meta name="description" content="تواصل مع فريق الدعم الفني لتطبيق TikDown Pro" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000000;
+      --dark: #0a0a0a;
+      --card: #111111;
+      --border: #1e1e1e;
+      --accent: #fe2c55;
+      --accent2: #25f4ee;
+      --text: #ffffff;
+      --muted: #888888;
+      --font: 'Tajawal', sans-serif;
+    }
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.7;
+    }
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      backdrop-filter: blur(20px);
+      background: rgba(0,0,0,0.7);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: .6rem;
+      font-size: 1.3rem; font-weight: 800; text-decoration: none; color: var(--text);
+    }
+    .nav-logo .logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .95rem; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    
+    .content-wrapper {
+      max-width: 600px;
+      margin: 8rem auto 4rem;
+      padding: 3rem 2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      text-align: center;
+    }
+    h1 { font-size: 2.2rem; margin-bottom: 1rem; color: var(--accent2); }
+    p { color: var(--muted); margin-bottom: 2rem; font-size: 1.05rem; }
+
+    .form-group { margin-bottom: 1.5rem; text-align: right; }
+    .form-group label { display: block; margin-bottom: .5rem; font-weight: 700; color: var(--text); }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font);
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--accent);
+    }
+    
+    .btn-submit {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, var(--accent), #c8002c);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-family: var(--font);
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity .2s;
+    }
+    .btn-submit:hover { opacity: 0.9; }
+
+    .email-direct {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px dashed var(--border);
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .email-direct a { color: var(--accent2); text-decoration: none; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+    footer a { color: var(--muted); text-decoration: none; transition: color .2s; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-top: .8rem; }
+    
+    @media (max-width: 600px) { .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">⬇️</div>
+      TikDown Pro
+    </a>
+    <div class="nav-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="blog.html">المدونة</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <h1>اتصل بنا</h1>
+    <p>هل لديك استفسار، اقتراح، أو واجهت مشكلة؟ نحن هنا للمساعدة!</p>
+
+    <form onsubmit="alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.'); return false;">
+      <div class="form-group">
+        <label>الاسم الكامل</label>
+        <input type="text" placeholder="اكتب اسمك هنا..." required />
+      </div>
+      <div class="form-group">
+        <label>البريد الإلكتروني</label>
+        <input type="email" placeholder="example@email.com" required />
+      </div>
+      <div class="form-group">
+        <label>رسالتك</label>
+        <textarea rows="5" placeholder="كيف يمكننا مساعدتك؟" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">إرسال الرسالة</button>
+    </form>
+
+    <div class="email-direct">
+      أو يمكنك مراسلتنا مباشرة عبر البريد الإلكتروني:<br/>
+      <a href="mailto:ahmedalaraqe863@gmail.com">ahmedalaraqe863@gmail.com</a>
+    </div>
+  </div>
+
+  <footer>
+    <div>© 2025 TikDown Pro. جميع الحقوق محفوظة.</div>
+    <div class="footer-links">
+      <a href="privacy.html">سياسة الخصوصية</a>
+      <a href="terms.html">شروط الاستخدام</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+  </footer>
+
+</body>
+</html>
